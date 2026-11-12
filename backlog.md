@@ -14,13 +14,13 @@ Build in phase order. Inside Core Features, finish the happy path before the har
 
 ## Setup
 
-- [ ] Add `pyproject.toml` for the `sprint-health` package, `requires-python >= 3.11`, dependencies `requests`, `openpyxl`, and `python-dotenv`, and a `pytest` dev extra — custom skill
-- [ ] Point setuptools at the `sprint_health` package, and set pytest `pythonpath = ["."]` and `testpaths = ["tests"]` so `python -m pytest` runs from a fresh checkout — custom skill
-- [ ] Create the package modules `sprint_health/__init__.py`, `__main__.py`, `config.py`, `jira_client.py`, `report.py`, and `excel_writer.py`, each with a docstring that states the responsibility in the spec — custom skill
-- [ ] Create `tests/test_report.py` for fixture-only tests that never call the network — custom skill
-- [ ] Create `.venv` with Python 3.11 or newer and install the project with the dev extra — custom skill
-- [ ] Gitignore `.env`, `.venv/`, and `out/` so the API token and generated workbooks stay out of git — custom skill
-- [ ] Add `tests/fixtures/` for the recorded Jira payload used later by the sheet-row test — custom skill
+- [ ] Add `pyproject.toml` for the `sprint-health` package, `requires-python >= 3.11`, dependencies `requests`, `openpyxl`, and `python-dotenv`, and a `pytest` dev extra — custom skill (#1)
+- [ ] Point setuptools at the `sprint_health` package, and set pytest `pythonpath = ["."]` and `testpaths = ["tests"]` so `python -m pytest` runs from a fresh checkout — custom skill (#2)
+- [ ] Create the package modules `sprint_health/__init__.py`, `__main__.py`, `config.py`, `jira_client.py`, `report.py`, and `excel_writer.py`, each with a docstring that states the responsibility in the spec — custom skill (#3)
+- [ ] Create `tests/test_report.py` for fixture-only tests that never call the network — custom skill (#4)
+- [ ] Create `.venv` with Python 3.11 or newer and install the project with the dev extra — custom skill (#5)
+- [ ] Gitignore `.env`, `.venv/`, and `out/` so the API token and generated workbooks stay out of git — custom skill (#6)
+- [ ] Add `tests/fixtures/` for the recorded Jira payload used later by the sheet-row test — custom skill (#7)
 
 ## Core Features
 
