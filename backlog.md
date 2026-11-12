@@ -22,6 +22,26 @@ Build in phase order. Inside Core Features, finish the happy path before the har
 - [ ] Gitignore `.env`, `.venv/`, and `out/` so the API token and generated workbooks stay out of git — custom skill (#6)
 - [ ] Add `tests/fixtures/` for the recorded Jira payload used later by the sheet-row test — custom skill (#7)
 
+## Module 19 — GitHub coding agent
+
+The coding agent takes a repository issue, edits files, and opens a pull request. It has no access to this Mac, the gitignored `.env`, or the live Jira board, and it must not receive `JIRA_API_TOKEN`.
+
+Delegate these open Setup issues. Each one is a committed file change whose acceptance criteria are already written above:
+
+- #2 — setuptools package discovery and pytest `pythonpath` / `testpaths`
+- #3 — `sprint_health` module files, each with a docstring that states its spec responsibility
+- #4 — `tests/test_report.py` for fixture-only tests that never call the network
+- #6 — `.gitignore` entries for `.env`, `.venv/`, and `out/`
+- #7 — add `tests/fixtures/` and a sanitized fixture skeleton. Record the real Jira payload in a later local step so the fixture does not invent board data.
+
+Keep these in the local session:
+
+- #1 is already closed.
+- #5 creates `.venv` on this machine and installs the dev extra.
+- Integration: the launchd plist may be committed only as a template with no secret. Confirming the Mac timezone, loading `.env` from this working directory, and `launchctl bootstrap` / `kickstart` stay here.
+- Testing items marked MCP: the two blocking comparisons against the live board.
+- Any task that needs the API token, a real account id, or a check that the real token is absent from the tree.
+
 ## Core Features
 
 ### Happy path

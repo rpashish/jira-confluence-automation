@@ -29,3 +29,7 @@ Each entry below is an instruction file with a one-line description. Optional su
   + Target: `sprint_health/jira_client.py`, `project_spec.md`
   + Exceptions: a request to create a Jira project still runs this read. It does not create a project and it does not switch boards.
   + Status: battle-tested
+- [`./instructions/validate-instructions.agent.md`](./validate-instructions.agent.md) — Validate each `walkthrough.md` against `validation-rules.md` and write one review file per walkthrough.
+  + Keywords: validate walkthrough, review walkthrough, walkthrough.md, validation rules, walkthrough review
+  + Target: `**/walkthrough.md`, `validation-rules.md`
+  + Exceptions: does not apply to module reports in `work/` or to files in `instructions/`.

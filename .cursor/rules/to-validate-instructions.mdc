@@ -1,0 +1,7 @@
+---
+description: Validate each walkthrough.md against validation-rules.md
+globs:
+alwaysApply: true
+---
+
+Follow the instructions in `./instructions/validate-instructions.agent.md` when you are asked to validate walkthroughs, review walkthrough.md files, or run the walkthrough review.

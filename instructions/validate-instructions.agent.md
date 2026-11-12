@@ -1,0 +1,15 @@
+- Use this instruction when the user asks to validate walkthroughs, review `walkthrough.md` files, or run the walkthrough review.
+- Read `validation-rules.md` completely before checking any file.
+- Target files are every `walkthrough.md` under the project root.
+- Skip `.git`, `.venv`, `venv`, `out`, `__pycache__`, and `.pytest_cache`.
+- For each file, in this order: read the rules, read the file, check it against the rules, report the issues, then move to the next file.
+- Apply checks VR-1 through VR-6 from `validation-rules.md`. A file fails a check when that condition is not met.
+- For each failure, report the check id, the file path, and the failing line or the missing heading.
+- When every check passes, say the file passes.
+- Write one Markdown result per walkthrough to `out/walkthrough-reviews/<same relative path>/walkthrough.review.md`.
+- Run the batch from the project root:
+  + `python3 tools/review_walkthroughs.py`
+- The script sends `validation-rules.md` plus each file to the Claude CLI and writes those result files.
+- When the script prints `Target files: 0`, report that no walkthrough was found. Do not invent review results.
+- When the script exits 1, report the saved line `Review failed for <path>: <error>`. Do not invent a pass.
+- Verified example: `python3 tools/review_walkthroughs.py` with no `walkthrough.md` in the tree prints `Target files: 0` and exits 0.
