@@ -10,6 +10,10 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+# Node
+node_modules/
+sprint-health-web/client/dist/
+
 # Virtual environments
 .venv/
 venv/

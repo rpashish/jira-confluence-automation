@@ -1,0 +1,161 @@
+:root {
+  color: #1c2430;
+  background: #f4f1ea;
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.masthead {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  color: #6d5840;
+}
+
+h1, h2, h3 { font-weight: 600; }
+
+h1 {
+  margin: 0.2rem 0;
+  font-size: 2.6rem;
+  color: #1f4e79;
+}
+
+h2 {
+  margin: 0 0 0.8rem;
+  color: #1f4e79;
+}
+
+.lede, .status-line, .note, .assignees, .excluded {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.lede { max-width: 42rem; line-height: 1.5; }
+
+.banner, .notice, .panel {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: #fff8e8;
+  border: 1px solid #e2d3b0;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+.panel ul { margin-bottom: 0; }
+
+.cover, section {
+  margin-top: 1.5rem;
+}
+
+.cover {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 1px 0 rgba(31, 78, 121, 0.08);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem 1rem;
+  margin: 0;
+}
+
+dt {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6d5840;
+}
+
+dd { margin: 0.15rem 0 0; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.metric {
+  background: #1f4e79;
+  color: #f7f4ee;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.metric h3 {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.count {
+  margin: 0.35rem 0 0;
+  font-size: 1.8rem;
+}
+
+.points {
+  margin: 0.15rem 0 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: left;
+  padding-top: 0.4rem;
+  color: #6d5840;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid #e6e0d6;
+}
+
+th {
+  background: #1f4e79;
+  color: white;
+  font-weight: 600;
+}
+
+.flag {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.flag.over { background: #f8d7d3; color: #8a2b22; }
+.flag.ok { background: #dceee4; color: #1d5c3b; }
+
+a { color: #1f4e79; }
