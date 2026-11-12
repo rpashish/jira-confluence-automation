@@ -1,0 +1,7 @@
+---
+description: Calculate monthly EMI with tools/flaoting-interest.py
+globs:
+alwaysApply: true
+---
+
+Follow the instructions in `./instructions/use-flaoting-interest.agent.md` when you are asked to calculate a monthly EMI, an equated monthly installment, or a floating-interest payment.

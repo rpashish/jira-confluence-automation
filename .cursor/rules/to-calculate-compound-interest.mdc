@@ -1,0 +1,7 @@
+---
+description: Calculate compound interest with tools/compound_interest.py
+globs:
+alwaysApply: true
+---
+
+Follow the instructions in `./instructions/calculate-compound-interest.agent.md` when you are asked to calculate compound interest, report a final amount, or report interest earned.
