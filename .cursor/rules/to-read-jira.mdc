@@ -4,4 +4,4 @@ globs:
 alwaysApply: true
 ---
 
-Follow the instructions in `./instructions/read-jira.agent.md` when you are asked to read Jira or implement the Jira read.
+Follow the instructions in `./instructions/read-jira.agent.md` when you are asked to read Jira, create a Jira update, or implement the Jira read.

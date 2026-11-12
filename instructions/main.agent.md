@@ -14,5 +14,5 @@ Each entry below is an instruction file with a one-line description. Optional su
   + Keywords: status report, weekly status, accomplishments, blockers, next week
   + Target: `work/**/*.md`, `reports/**/*.md`
 - [`./instructions/read-jira.agent.md`](./read-jira.agent.md) — Read the active Jira Cloud sprint: board, sprint, issues, fields, and the five assignee names.
-  + Keywords: jira read, read jira, JiraClient, active sprint, board issues
+  + Keywords: jira read, read jira, jira update, JiraClient, active sprint, board issues
   + Target: `sprint_health/jira_client.py`, `project_spec.md`
