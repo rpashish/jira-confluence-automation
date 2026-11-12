@@ -1,0 +1,7 @@
+---
+description: Create, update, or organize project instruction files
+globs:
+alwaysApply: true
+---
+
+Follow the instructions in `./instructions/creating-instructions.agent.md` when you are asked to create, update, or organize instruction files.

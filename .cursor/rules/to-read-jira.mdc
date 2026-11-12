@@ -1,0 +1,7 @@
+---
+description: Read the active Jira Cloud sprint for the sprint health report
+globs:
+alwaysApply: true
+---
+
+Follow the instructions in `./instructions/read-jira.agent.md` when you are asked to read Jira or implement the Jira read.

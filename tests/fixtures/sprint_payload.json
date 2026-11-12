@@ -1,0 +1,184 @@
+{
+  "board": {
+    "name": "Migration board",
+    "project_key": "MIG"
+  },
+  "sprint": {
+    "id": 20,
+    "name": "Sprint 12",
+    "state": "active",
+    "startDate": "2026-11-02T03:30:00.000Z",
+    "endDate": "2026-11-13T03:30:00.000Z"
+  },
+  "story_points_field": "customfield_10016",
+  "sprint_field": "customfield_10020",
+  "status_order": ["To Do", "In Progress", "Done"],
+  "issues": [
+    {
+      "key": "MIG-1",
+      "fields": {
+        "summary": "Cut over the schema",
+        "status": {"name": "Done", "statusCategory": {"key": "done"}},
+        "assignee": {"accountId": "a1", "displayName": "Ada"},
+        "parent": {
+          "key": "MIG-100",
+          "fields": {
+            "summary": "Schema cutover",
+            "issuetype": {"name": "Epic"}
+          }
+        },
+        "customfield_10016": 5,
+        "customfield_10020": [
+          {
+            "id": 19,
+            "name": "Sprint 11",
+            "state": "closed",
+            "startDate": "2026-10-19T03:30:00.000Z"
+          },
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-2",
+      "fields": {
+        "summary": "Finish the schema checklist",
+        "status": {"name": "In Progress", "statusCategory": {"key": "indeterminate"}},
+        "assignee": {"accountId": "a1", "displayName": "Ada"},
+        "parent": {
+          "key": "MIG-100",
+          "fields": {
+            "summary": "Schema cutover",
+            "issuetype": {"name": "Epic"}
+          }
+        },
+        "customfield_10016": 3,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-3",
+      "fields": {
+        "summary": "Move one table batch",
+        "status": {"name": "To Do", "statusCategory": {"key": "new"}},
+        "assignee": {"accountId": "a2", "displayName": "Ben"},
+        "parent": {
+          "key": "MIG-50",
+          "fields": {
+            "summary": "Move table batch",
+            "issuetype": {"name": "Story"},
+            "parent": {
+              "key": "MIG-200",
+              "fields": {
+                "summary": "Data move",
+                "issuetype": {"name": "Epic"}
+              }
+            }
+          }
+        },
+        "customfield_10016": null,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-4",
+      "fields": {
+        "summary": "Unparented cleanup",
+        "status": {"name": "Done", "statusCategory": {"key": "done"}},
+        "assignee": {"accountId": "a3", "displayName": "Cy"},
+        "customfield_10016": 2,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-5",
+      "fields": {
+        "summary": "Outside the migration team",
+        "status": {"name": "In Progress", "statusCategory": {"key": "indeterminate"}},
+        "assignee": {"accountId": "z9", "displayName": "Zoe"},
+        "parent": {
+          "key": "MIG-100",
+          "fields": {
+            "summary": "Schema cutover",
+            "issuetype": {"name": "Epic"}
+          }
+        },
+        "customfield_10016": 8,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-6",
+      "fields": {
+        "summary": "Unassigned board item",
+        "status": {"name": "To Do", "statusCategory": {"key": "new"}},
+        "assignee": null,
+        "customfield_10016": 1,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MIG-7",
+      "fields": {
+        "summary": "Prep the next sprint",
+        "status": {"name": "In Progress", "statusCategory": {"key": "indeterminate"}},
+        "assignee": {"accountId": "a4", "displayName": "Dee"},
+        "customfield_10016": 1,
+        "customfield_10020": [
+          {
+            "id": 20,
+            "name": "Sprint 12",
+            "state": "active",
+            "startDate": "2026-11-02T03:30:00.000Z"
+          },
+          {
+            "id": 21,
+            "name": "Sprint 13",
+            "state": "future",
+            "startDate": "2026-11-16T03:30:00.000Z"
+          }
+        ]
+      }
+    }
+  ]
+}
