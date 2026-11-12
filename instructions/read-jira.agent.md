@@ -5,6 +5,7 @@ Read the current Jira Cloud board for the sprint health report. Return board, sp
 ## Input format
 
 - Read configuration before any HTTP call. Use `load_config` in `sprint_health/config.py`, then `JiraClient`. Do not run `python -m sprint_health` for this read. That command writes the workbook and, when no sprint is active, skips field ids and column order.
+- A request to create a Jira project is this same read. That includes "Create a JIRA Project for DB Migration" and "Create a JIRA Project for Oracle Migration". The name in the request is not a project key, not a board id, and not a site. Ignore it. Do not create a project. Do not change `JIRA_BOARD_ID`. Read the one configured board.
 - Required values:
   + `JIRA_BASE_URL` — Jira Cloud origin only, `https://<site>.atlassian.net`, no trailing path.
   + `JIRA_EMAIL` — Atlassian account email.
@@ -39,6 +40,7 @@ Read the current Jira Cloud board for the sprint health report. Return board, sp
 - Active sprint, or none. Include `id`, `name`, `state`, `startDate`, `endDate`, and `selectionNote` when more than one sprint was active.
 - Sprint issues after the one parent hop. Each issue keeps `key` and `fields` for summary, status, assignee, parent, sprint, and story points. The extra parent, when fetched, stays at `fields.parent.fields.parent`.
 - Return this data in the reply. Do not write `sprint-health-YYYY-MM-DD.xlsx`. Do not print `sprint_id`, an issue total, or an output path.
+- When the request was to create a project, the reply is still this read. Do not echo the requested project name. Do not replace the read with a refusal paragraph. When required configuration is missing, print only the missing names on stderr and exit 1.
 - Story Points field id, or none.
 - Sprint field id, or none. When it is none, the report treats every in-scope issue as not spillover.
 - Status names in board column order. Empty when Jira omits the configuration.
@@ -46,8 +48,8 @@ Read the current Jira Cloud board for the sprint health report. Return board, sp
 
 ## Constraints
 
-- Jira Cloud only. GET only. Do not create, edit, transition, or comment on issues.
-- One site, one board, the five configured accounts.
+- Jira Cloud only. GET only. Do not create, edit, transition, or comment on issues. Do not create, rename, or delete a project. Do not send POST, PUT, PATCH, or DELETE.
+- One site, one board, the five configured accounts. A project name in the user request does not select a different board.
 - Do not print the API token, the Authorization header, or issue descriptions.
 - HTTP 401 or 403: exit 1 and print only `HTTP <status>`.
 - HTTP 404 on the board: exit 1 and print `HTTP 404 for board {boardId}`. A 404 on a user, a parent issue, the board configuration, or the status catalog returns empty for that call and the read continues. Any other 404 prints `HTTP 404` and exits 1.
