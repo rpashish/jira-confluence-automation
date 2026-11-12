@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-sprint}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sprint}
+      POSTGRES_DB: ${POSTGRES_DB:-sprint_health}
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sprint -d sprint_health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  api:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      DATABASE_URL: postgres://sprint:sprint@db:5432/sprint_health
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
